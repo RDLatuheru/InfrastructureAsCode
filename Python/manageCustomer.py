@@ -4,11 +4,9 @@ import enum
 
 class manageCustomer:
 
-    main = None
-
     def __init__(self, customerId, main):
         self.customer = "klant"+customerId
-        self.main = main
+        self.mainMenu = main
         cmd.changeDir("/home/rlatuh-adm/iac-course/practicum/"+self.customer)
         cmd.clear()
         print("Beheer: "+customerId)
@@ -36,7 +34,7 @@ class manageCustomer:
             case "4":
                 self.printCustomerEnv()
             case "5":
-                self.main.__init__()
+                self.mainMenu.__init__()
             case other:
                 print('Keuze ongeldig. probeer het opnieuw')
 

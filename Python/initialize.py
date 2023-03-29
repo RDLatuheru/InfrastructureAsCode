@@ -1,7 +1,3 @@
-from main import program
+from program import program
 
 run = program()
-
-#test change
-
-#test2

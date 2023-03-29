@@ -1,5 +1,3 @@
-import os
-import sys
 import terminalCommands as cmd
 from manageCustomer import manageCustomer
 

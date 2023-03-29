@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../week-2"
+		},
+		{
+			"path": "../../les2_examples"
+		},
+		{
+			"path": "../../les3_examples"
+		},
+		{
+			"path": "../../examples"
+		}
+	],
+	"settings": {}
+}

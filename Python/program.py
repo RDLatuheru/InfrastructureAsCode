@@ -10,28 +10,21 @@ class program:
         print("1. Bestaande klant beheren")
         print("2. Nieuwe klant toevoegen")
 
-        validChoise = False
-        while(validChoise == False):
-            choise = input("Kies een optie:")
-            try:
-                print("Geselecteerde keuze: "+choise)
-                choise = int(choise)
-                validChoise = True
-            except ValueError:
-                # Handle the exception
+        choise = input("Kies een optie:")
+        match choise:
+            case "1":
+                self.printCustomers()
+                self.selectCustomer()
+            case "2":
+                self.addNewCustomer()
+            case other:
                 print('Keuze ongeldig. probeer het opnieuw')
         
-        cmd.changeDir("/home/rlatuh-adm/iac-course/practicum/Python")
         cmd.clear()
-
-        if (choise == 1):
-            self.printCustomers()
-            self.selectCustomer()
-        else:
-            self.addNewCustomer()
 
     # Manage customers
     def printCustomers(self):
+        cmd.changeDir("/home/rlatuh-adm/iac-course/practicum/Python")
         customerFile = open('klanten.txt', 'r') # reads file
 
         customerNumber = 1
@@ -55,6 +48,7 @@ class program:
 
     # Adds a new customer customer auto increments
     def addNewCustomer(self):
+        cmd.changeDir("/home/rlatuh-adm/iac-course/practicum/Python")
         file = 'klanten.txt'
         customerCount = sum(1 for line in open(file)) # Counts amount of customers
 

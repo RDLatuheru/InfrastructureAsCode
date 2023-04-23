@@ -1,3 +1,3 @@
-from program import program
+from mainMenu import mainMenu
 
-run = program()
+run = mainMenu()
